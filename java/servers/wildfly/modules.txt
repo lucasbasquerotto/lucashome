@@ -1,0 +1,24 @@
+Módulos WildFly:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.3" name="org.postgresql">
+	<resources>
+		<resource-root path="postgresql-9.4.1208.jar"/>
+	</resources>
+	<dependencies>
+		<module name="javax.api"/>
+		<module name="javax.transaction.api"/>
+        <module name="javax.servlet.api" optional="true"/>
+	</dependencies>
+</module>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.3" name="org.apache.derby">
+     <resources>
+          <resource-root path="derby.jar"/>
+     </resources>
+     <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+     </dependencies>
+</module>	

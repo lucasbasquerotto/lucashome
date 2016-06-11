@@ -1,0 +1,23 @@
+Wildfly:
+
+- Criar um usuário administrador.
+- Exemplo:
+	- Username: admin
+	- Password: 123456
+
+- Iniciar Wildfly:
+	- Executar "D:/Tools/wildfly-10.0.0.Final/bin/standalone.bat" -c standalone-full.xml
+
+- Shutdown Wildfly:
+	- Executar "D:/Tools/wildfly-10.0.0.Final/bin/jboss-cli.bat"
+	- connect
+	- shutdown
+	
+- Console de admin: http://localhost:9990/console/App.html#home
+
+- Para mapear recursos, prefixar com "java:/".
+- Exemplos:
+	- Ex1: (xml) <connection-factory name="NewMessageFactory" entries="java:/jms/NewMessageFactory" connectors="in-vm"/>
+	- Ex1: (java) @Resource(mappedName="java:/jms/NewMessageFactory")
+	- Ex2: (xml) <jms-queue name="NewMessageQueue" entries="java:/jms/queue/NewMessage java:jboss/exported/jms/queue/NewMessage"/>
+	- Ex2: (java) @Resource(mappedName="java:/jms/queue/NewMessage")

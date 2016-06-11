@@ -1,0 +1,10 @@
+- Se não conseguir iniciar o servidor JavaDB:
+	- Copiar [jdk]/db (se não der certo, baixar o glassfish e copiar [glassfish]/javadb) para [some_path]
+	- Exemplo: copiar de "D:\Tools\GlassFish_Server\javadb" para "D:\Tools\resources\javadb"
+	- Clicar com o botão direito em JavaDB (Netbeans) e alterar o path de [jdk]/db para [some_path]
+	- Exemplo: alterar de "D:\Tools\jdk1.8.0_73\db" para "D:\Tools\resources\javadb"
+	- Tentar iniciar o servidor e ver as tabelas no datasource.
+
+- Wildfly:	
+	- Incluir módulo do derby, driver e datasource no servidor (ver /wildfly/modules.txt e /wildfly/standalone-full.xml).
+	- Pode usar o console de admin para incluir o datasource.

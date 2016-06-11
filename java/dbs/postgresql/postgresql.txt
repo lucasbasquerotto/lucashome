@@ -1,0 +1,13 @@
+Criar um usuário com o mesmo nome do banco que será usado:
+- Executar o pgAdminIII
+- Criar (se não tiver nenhum) e iniciar um servidor com o usuário postgres (criado por padrão).
+- Clicar em "Execute arbitrary SQL queries" (ícone ou no menu em Tools>Query tool).
+- Executar instrução para criar o usuário dando um nome e uma senha (Ex: postgredb/student).
+
+PostgreSQL:
+- Username: postgredb
+- Password: student
+
+- Wildfly:	
+	- Incluir módulo, driver e datasource no servidor (ver /wildfly/modules.txt e /wildfly/standalone-full.xml).
+	- Pode usar o console de admin para incluir o datasource.
